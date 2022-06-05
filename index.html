@@ -5,14 +5,18 @@
     <title>Portfolio</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="assets/getip.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="/" class="nav-link">Main page</a>
-            <a href="projects.html" class="nav-link">Projects</a>
+            <div class="nav-link-container">
+                <a href="/" class="nav-link">Main page</a>
+            </div>
+            <div class="nav-link-container">
+                <a href="projects.html" class="nav-link">Projects</a>
+            </div>
         </nav>
     </header>
     <main>
@@ -25,21 +29,22 @@
         <section id="social-media-links">
             <h2>Social media links</h2>
             <a href="https://github.com/timolai-andrievich" target="_blank" class="do-not-underline">
-                <img src="assets/github-logo.svg" class="social-icon"/>
+                <img src="assets/logos/github-logo.svg" class="social-icon"/>
             </a>
             <a href="https://t.me/liveworldlike" target="_blank" class="do-not-underline">
-                <img src="assets/telegram-logo.svg" class="social-icon"/>
+                <img src="assets/logos/telegram-logo.svg" class="social-icon"/>
             </a>
             <a href="mailto:timolai.andrievitch@ya.ru" target="_blank" class="do-not-underline">
-                <img src="assets/email-icon.svg" class="social-icon"/>
+                <img src="assets/logos/email-icon.svg" class="social-icon"/>
             </a>
             <a href="https://codeforces.com/profile/timolai.andrievitch" target="_blank" class="do-not-underline">
-                <img src="assets/codeforces-logo.svg" class="social-icon"/>
+                <img src="assets/logos/codeforces-logo.svg" class="social-icon"/>
             </a>
         </section>
     </main>
     <footer>
         &copy; 2022
+        <p>Your IP is: <span id="ip">127.0.0.1</span></p>
     </footer>
 </body>
 </html>

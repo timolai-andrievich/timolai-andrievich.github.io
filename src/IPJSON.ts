@@ -1,3 +1,3 @@
-export interface IPJSON{
+export interface IpJson{
     ip: string
 }

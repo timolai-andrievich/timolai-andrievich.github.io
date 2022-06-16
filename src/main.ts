@@ -1,15 +1,14 @@
-import { IPJSON } from "./IPJSON";
+import type { IpJson } from "./IpJson";
 
-async function get_ip(): Promise<string> {
+async function getIp(): Promise<string> {
     let response: Response = await fetch("https://api.ipify.org/?format=json");
-    let ip_json: IPJSON = await response.json() as IPJSON;
-    let ip: string = ip_json.ip;
-    return ip;
+    let ipJson: IpJson = await response.json() as IpJson;
+    return ipJson.ip;
 }
 
-function inject_ip(ip: string): void {
-    const ip_element: HTMLElement = document.querySelector("#ip") as HTMLElement;
-    ip_element.innerText = ip;
+function injectIp(ip: string): void {
+    const ipElement: HTMLElement = document.querySelector("#ip") as HTMLElement;
+    ipElement.innerText = ip;
 }
 
-get_ip().then(inject_ip);
+getIp().then(injectIp);

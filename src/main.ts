@@ -1,14 +1,10 @@
-import type { IpJson } from "./IpJson";
+import App from './App.svelte';
 
-async function getIp(): Promise<string> {
-    let response: Response = await fetch("https://api.ipify.org/?format=json");
-    let ipJson: IpJson = await response.json() as IpJson;
-    return ipJson.ip;
-}
+const app = new App({
+	target: document.body,
+	props: {
+		name: 'world'
+	}
+});
 
-function injectIp(ip: string): void {
-    const ipElement: HTMLElement = document.querySelector("#ip") as HTMLElement;
-    ipElement.innerText = ip;
-}
-
-getIp().then(injectIp);
+export default app;

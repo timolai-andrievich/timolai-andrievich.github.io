@@ -1,28 +1,32 @@
 {
-  "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-typescript": "^8.3.3",
-    "rollup": "^2.75.6",
-    "rollup-plugin-terser": "^7.0.2",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.3"
-  },
-  "name": "timolai-andrievich.github.io",
-  "description": "This repository is a site made as a project for Innopolis University FrontEnd Web Development 2022 course",
+  "name": "svelte-app",
   "version": "1.0.0",
-  "main": "main.js",
+  "private": true,
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "dev": "rollup -c rollup.config.js -w"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --no-clear",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "install": "npm install",
+    "deploy": "git push origin `git subtree split --prefix public master`:gh-pages --force"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/timolai-andrievich/timolai-andrievich.github.io.git"
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0",
+    "svelte-check": "^2.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "@rollup/plugin-typescript": "^8.0.0",
+    "typescript": "^4.0.0",
+    "tslib": "^2.0.0",
+    "@tsconfig/svelte": "^2.0.0"
   },
-  "author": "Timolai Andrievich",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/timolai-andrievich/timolai-andrievich.github.io/issues"
-  },
-  "homepage": "https://github.com/timolai-andrievich/timolai-andrievich.github.io#readme"
+  "dependencies": {
+    "sirv-cli": "^2.0.0"
+  }
 }

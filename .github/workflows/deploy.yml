@@ -9,7 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build
-        run: 
-        - npm run install 
-        - npm run build
-        - npm run deploy
+        run: npm i && npm run build && npm run deploy

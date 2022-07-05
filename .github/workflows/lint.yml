@@ -8,13 +8,13 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-    - name: Clone git repository
-      uses: actions/checkout@v3
-    - name: Download node.js
-      uses: actions/setup-node@v3  
-      with: 
-        node-version: "16"
-    - name: Run continuous integration
-      run: npm ci
-    - name: Lint
-      run: npm run lint
+      - name: Clone git repository
+        uses: actions/checkout@v3
+      - name: Download node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Run continuous integration
+        run: npm ci
+      - name: Lint
+        run: npm run lint
